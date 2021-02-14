@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import { Article } from "../../pages";
 import Picture from "../Picture";
 import dayjs from 'dayjs';
-import TruncatedHtml from "../TruncatedHtml";
+import FixedTruncatedHtml from "../FixedTruncatedHtml";
 import Link from 'next/link';
 
 
@@ -24,7 +24,7 @@ export default function ArticleScroll({articles}: Props): ReactElement {
                 <div className={'details'}>
                     <h2>{title}</h2>
                     <div className={'published'}>veröffentlicht am {formatDate(created)} von {name}</div>
-                    <TruncatedHtml content={body} maxLine={2}/>
+                    <FixedTruncatedHtml content={body} />
                 </div>
             </div>
         </Link>)}
